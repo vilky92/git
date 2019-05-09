@@ -1,0 +1,58 @@
+<h1>Stylo</h1>
+<!-- <div *ngFor= 'let stylo of stylos'>
+    <h2>{{stylo.id}} - {{stylo.color}} - {{stylo.number}}</h2>
+</div> -->
+<div>
+    <!-- <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Couleur</th>
+            <th>Nombre</th>
+            <th>S&eacute;l&eacute;ctionner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let stylo of stylos'>
+            <td >{{stylo.id}}</td>
+            <td >{{stylo.color}}</td>
+            <td >{{stylo.number}}</td>
+            <td><button (click)="delete(stylo.id)"></button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button (click)=getOneStylo(1)></button>
+      <p *ngIf="stylo">{{ stylo.id }} - {{ stylo.color }} - {{ stylo.number }}</p>
+
+            <form [formGroup]="styloForm">
+              <div class="form-group">
+                <label for="">Couleur</label>
+                <input type="text" class="form-control" formControlName="color" [(ngModel)]="selectedStylo.color">
+              </div>
+              <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" formControlName="number"
+                  [(ngModel)]="selectedStylo.number">
+              </div>
+
+              <button class="btn btn-success"
+                (click)="createStylo()">
+              </button>
+            </form> -->
+          <button (click)=key()>ICI</button>
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th *ngFor='let key of two'>{{key}}</th>
+        <th>S&eacute;l&eacute;ctionner</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor='let stylo of stylos; let key in stylo'>
+        <td>{{key}}</td>
+        <td><button (click)="delete(stylo.id)"></button></td>
+      </tr>
+    </tbody>
+  </table>
